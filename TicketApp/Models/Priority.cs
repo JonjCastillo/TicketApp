@@ -1,4 +1,4 @@
-﻿namespace TicketApp.Areas.IssueTicket.Models
+﻿namespace TicketApp.Models
 {
     public class Priority
     {

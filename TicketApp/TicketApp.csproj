@@ -15,10 +15,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Areas\IssueTicket\Data\" />
-    <Folder Include="Areas\IssueTicket\Views\Issue\" />
-    <Folder Include="Areas\IssueTicket\Views\Shared\" />
-  </ItemGroup>
-
 </Project>

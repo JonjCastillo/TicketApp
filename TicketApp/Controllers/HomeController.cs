@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using TicketApp.Models;
 
@@ -6,16 +7,21 @@ namespace TicketApp.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private IssueContext context { get; set; }
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(IssueContext ctx)
         {
-            _logger = logger;
+            context = ctx;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
-            return View();
+            var issues = context.Issues
+                .Include(issues => issues.Priority)
+                .Include(issues => issues.Status)
+                .OrderBy(i => i.submitDate).ToList();
+            return View(issues);
         }
 
         public IActionResult Privacy()

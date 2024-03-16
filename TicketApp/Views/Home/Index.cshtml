@@ -1,8 +1,32 @@
-﻿@{
+﻿@model List<Issue>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="content_container">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Priority</th>
+                <th>Sibject</th>
+                <th>Requester</th>
+                <th>Request Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ticket in Model)
+            {
+                <tr>
+                    <td>@ticket.issueID</td>
+                    <td>@ticket.Priority.PriorityName</td>
+                    <td>@ticket.ticketTitle</td>
+                    <td>@ticket.ticketName</td>
+                    <td>@ticket.submitDate</td>
+                </tr>
+            }
+        </tbody>
+
+
+    </table>
 </div>
