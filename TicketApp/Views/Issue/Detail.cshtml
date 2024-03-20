@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+    create a list group to display the issue details
+*@
+@model Issue
+@{
+}
+<div>
+    <h4>Issue #@Model.issueID</h4>
+    <hr />
+    <ul class=" list-group list-group-horizontal-md">
+        <li class="list-group-item">
+            <b>Requester: </b>
+            <div class="">
+                <p>@Model.ticketName <br />@Model.ticketEmail</p>
+            </div>
+        </li>
+
+        <li class = "list-group-item">
+            <b>Request Date: </b>
+            <div class="">
+                <p>@Model.submitDate</p>
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <b>Priority: </b>
+            <div class="">
+                <p>@Model.Priority.PriorityName</p>
+            </div>
+        </li>
+
+        <li class = "list-group-item">
+            <b>Status: </b>
+            <div class="">
+                <p>@Model.Status.StatusName</p>
+            </div>
+        </li>
+
+    </ul>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <b>Subject: </b>
+            <div class="">
+                <p> @Model.ticketTitle</p>
+            </div>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+            <b>Details: </b>
+            <div class="">
+                <p>@Model.ticketDescription</p>
+            </div>
+        </li>
+    </ul>
+</div>

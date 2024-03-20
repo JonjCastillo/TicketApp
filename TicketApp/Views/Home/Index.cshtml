@@ -1,4 +1,10 @@
 ﻿@model List<Issue>
+
+    @*
+        For this major segment of the project the focus was on establishing the connection to the data base and passing that information to the view.
+        As such, the first completed view is the "Detail" view, which presents a detailed view of the ticket submitted, including the priority, a description of the problem, and so on.
+        The Home or index view is not yet complete, as there i want to add a filtering system that allows the user to sort the ticket by things such as the priority, the date, and the status of the ticket.
+    *@
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -20,7 +26,7 @@
                 <tr>
                     <td>@ticket.issueID</td>
                     <td>@ticket.Priority.PriorityName</td>
-                    <td>@ticket.ticketTitle</td>
+                    <td><a asp-controller="Issue" asp-action="Detail" asp-route-id="@ticket.issueID" >@ticket.ticketTitle</a></td>
                     <td>@ticket.ticketName</td>
                     <td>@ticket.submitDate</td>
                 </tr>
