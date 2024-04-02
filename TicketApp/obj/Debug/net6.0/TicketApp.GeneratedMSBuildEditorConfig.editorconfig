@@ -26,8 +26,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jonat/School/Spring 2024/Dynamic Web Dev/TicketApp/TicketApp/Views/Issue/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jonat/School/Spring 2024/Dynamic Web Dev/TicketApp/TicketApp/Views/Issue/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jonat/School/Spring 2024/Dynamic Web Dev/TicketApp/TicketApp/Views/Issue/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jonat/School/Spring 2024/Dynamic Web Dev/TicketApp/TicketApp/Views/Issue/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNzdWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jonat/School/Spring 2024/Dynamic Web Dev/TicketApp/TicketApp/Views/Shared/Error.cshtml]

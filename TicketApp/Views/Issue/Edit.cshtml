@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IssueViewModel
+@{
+    string title = ViewBag.Action + " Issue";
+    ViewData["Title"] = title;
+}
+<h2>@title</h2>
+<div>
+    <form asp-action="Edit" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="mb-3">
+            <label asp-for="StatusID" class="form-label">Status</label>
+            <select asp-for="StatusID" class="form-select">
+                <option value="">Select a status</option>
+                @foreach (var status in ViewBag.Statuses)
+                {
+                    <option value="@status.StatusID">@status.StatusName</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <label asp-for="PriorityID" class="form-label">Priority</label>
+            <select asp-for="PriorityID" class="form-select">
+                <option value="">Select a priority</option>
+                @foreach (var priority in ViewBag.Priorities)
+                {
+                    <option value="@priority.PriorityID">@priority.PriorityName</option>
+                }
+            </select>
+        </div>
+
+        <input type="hidden" asp-for="issueID" />
+
+        <button type="submit" class="btn btn-dark">Save</button>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-dark">Cancel</a>
+
+    </form>
+</div>

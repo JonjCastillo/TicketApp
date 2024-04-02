@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Issue
+@{
+}
+<h2>Confirm Deletion</h2>
+<div>
+    <h4>Are you sure you want to delete this ticket</h4>
+    <h4>Issue #@Model.issueID: @Model.ticketTitle</h4>
+</div>
+<div>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="issueID" />
+
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <a asp-controller="Home"asp-action="Index" class="btn btn-dark">Cancel</a>
+    </form>
+</div>
