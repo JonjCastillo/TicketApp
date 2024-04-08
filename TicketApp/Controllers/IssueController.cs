@@ -39,6 +39,7 @@ namespace TicketApp.Controllers
             {
                 context.Issues.Add(issue);
                 context.SaveChanges();
+                TempData["message"] = "Ticket submitted successfully!";
                 return RedirectToAction("Index", "Home");
             }
             else
@@ -84,6 +85,7 @@ namespace TicketApp.Controllers
                 {
                     context.Update(currentIssue);
                     context.SaveChanges();
+                    TempData["message"] = $"Ticket #{currentIssue.issueID} updated successfully";
                     return RedirectToAction("Index", "Home");
                 }
                 catch (DbUpdateConcurrencyException)
@@ -109,6 +111,7 @@ namespace TicketApp.Controllers
         [HttpPost]
         public IActionResult Delete(Issue issue)
         {
+            TempData["message"] = $"Ticket #{issue.issueID} deleted successfully";
             context.Issues.Remove(issue);
             context.SaveChanges();
             return RedirectToAction("Index", "Home");
